@@ -2,29 +2,47 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Your Name or Company",
   "classifications": [ "WebAPI", "C#", "Solution" ],
-  "identity": "Company.Product.Template",
+  "identity": "CompanyName.ProductName.TemplateName",
   "name": "Company Product Solution Template",
   "shortName": "comp-prod-template",
-  "sourceName": "Company.Product",
+  "sourceName": "CompanyName.ProductName",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
   "symbols": {
-    "Company": {
+    "CompanyName": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "Contoso",
-      "replaces": "Company"
+      "isRequired": true,
+      "fileRename": "true",
+      "displayName": "Company Name",
+      "replaces": "CompanyName"
     },
-    "Product": {
+    "ProductName": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "WebAPI",
+      "isRequired": true,
       "replaces": "Product"
     },
-    "Feature": {
+    "FeatureName": {
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "Feature",
       "fileRename": "true",
       "replaces": "Feature"
     }
-  }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(CompanyName != null && ProjectName != null)",
+          "rename": {
+            "CompanyName.ProjectName": "{{CompanyName}}.{{ProjectName}}"
+          }
+        }
+      ]
+    }
+  ]
 }
