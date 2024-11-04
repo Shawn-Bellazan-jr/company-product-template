@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Your Name or Company",
+  "classifications": [ "WebAPI", "C#", "Solution" ],
+  "identity": "Company.Product.Template",
+  "name": "Company Product Solution Template",
+  "shortName": "comp-prod-template",
+  "sourceName": "Company.Product",
+  "symbols": {
+    "Company": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Contoso",
+      "replaces": "Company"
+    },
+    "Product": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "WebAPI",
+      "replaces": "Product"
+    },
+    "Feature": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Feature",
+      "fileRename": "true",
+      "replaces": "Feature"
+    }
+  }
+}
